@@ -52,6 +52,19 @@
             <version>8.0.23</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver</artifactId>
+            <version>3.12.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-email</artifactId>
+            <version>1.5</version>
+        </dependency>
+
     </dependencies>
 
     <build>

@@ -1,7 +1,6 @@
 import bin.Environment;
-import com.sun.net.httpserver.HttpServer;
-import context.APIContext;
 import databases.MySqlConnection;
+import services.mailer.MailerService;
 import uitls.Auth;
 
 import java.awt.*;
@@ -17,16 +16,17 @@ public class Main {
     public static Environment environment;
     public static void main(String[] args) throws Exception {
 //        if(check_is_installed()){
-            HttpServer server = HttpServer.create(
-                    new InetSocketAddress(port), 10
-            );
-            new APIContext(server);
-            server.start();
-            URI uri = new URI("http://app.unknown.java/");
-            desktop.browse(uri);
+//            HttpServer server = HttpServer.create(
+//                    new InetSocketAddress(port), 10
+//            );
+//            new APIContext(server);
+//            server.start();
+//            URI uri = new URI("http://app.unknown.java/");
+//            desktop.browse(uri);
 //        }else{
 //            return;
 //        }
+        new MailerService();
     }
 
     public static String getIPAddress() throws Exception{
