@@ -10,8 +10,8 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.IOUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+//import org.apache.poi.xssf.usermodel.XSSFSheet;
+//import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import uitls.Auth;
 import uitls.HttpExchangeHandler;
 import uitls.JsonHandler;
@@ -125,13 +125,13 @@ public class User {
                     } else {
                         InputStream uploadInStream = fileItem.getInputStream();
                         byte[] buffer = IOUtils.toByteArray(uploadInStream);
-                        XSSFWorkbook workbook = new XSSFWorkbook(new ByteArrayInputStream(buffer));
-                        XSSFSheet sheet = workbook.getSheetAt(0);
-                        for (Row row: sheet){
-                            for(Cell cell: row){
-                                System.out.println(cell.getStringCellValue());
-                            }
-                        }
+//                        XSSFWorkbook workbook = new XSSFWorkbook(new ByteArrayInputStream(buffer));
+//                        XSSFSheet sheet = workbook.getSheetAt(0);
+//                        for (Row row: sheet){
+//                            for(Cell cell: row){
+//                                System.out.println(cell.getStringCellValue());
+//                            }
+//                        }
                     }
                     length++;
                 }

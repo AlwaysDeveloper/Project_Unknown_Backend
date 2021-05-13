@@ -56,6 +56,7 @@ public class MailerService {
                         String htmlContent = readFileAsString(System.getProperty("user.dir") + "\\src\\main\\resources\\template\\" + toSend.getTemplate() + ".html");
                         MongoCollection userCollection = mongoConnection.getCollection("users");
                         for (int i = 0; i < toSend.getTo().size(); i++) {
+                            System.out.println(toSend.getTo().size());
                             FindIterable<Document> user = userCollection.find(eq("_id", toSend.getTo().get(i))).projection(Projections.include(including));
                             MongoCursor<Document> userCursor = user.iterator();
                             Transporter transporter = new Transporter();
