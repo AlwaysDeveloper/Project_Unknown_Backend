@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Set;
 
-public class User {
+public class User{
     private JsonHandler jsonHandler = new JsonHandler();
     private HttpExchangeHandler handler = new HttpExchangeHandler();
     private MySqlConnection connection = new MySqlConnection();

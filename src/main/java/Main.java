@@ -1,4 +1,6 @@
 import bin.Environment;
+import com.sun.net.httpserver.HttpServer;
+import context.APIContext;
 import databases.MySqlConnection;
 import services.mailer.MailerService;
 import uitls.Auth;
@@ -11,16 +13,16 @@ import java.net.*;
 import java.util.HashMap;
 
 public class Main {
-    public static Integer port = 4600;
+    public static Integer port = 8080;
     public static Desktop desktop = java.awt.Desktop.getDesktop();
     public static Environment environment;
     public static void main(String[] args) throws Exception {
 //        if(check_is_installed()){
-//            HttpServer server = HttpServer.create(
-//                    new InetSocketAddress(port), 10
-//            );
-//            new APIContext(server);
-//            server.start();
+            HttpServer server = HttpServer.create(
+                    new InetSocketAddress(port), 10
+            );
+            new APIContext(server);
+            server.start();
 //            URI uri = new URI("http://app.unknown.java/");
 //            desktop.browse(uri);
 //        }else{
